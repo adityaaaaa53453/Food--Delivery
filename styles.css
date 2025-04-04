@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+.hero {
+    background: linear-gradient(135deg, #ff6b6b, #feca57);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background-color: white;
+    color: #ff6b6b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+}
+
+.restaurants {
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.restaurant-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.restaurant-card {
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05);
+}
+
+.restaurant-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.view-menu-btn {
+    display: inline-block;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-menu-btn:hover {
+    background-color: #ff5252;
+}
+
+.how-it-works {
+    background-color: #f8f8f8;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.step {
+    width: 30%;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    background-color: #ff6b6b;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Restaurant detail page styles */
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.restaurant-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.restaurant-info {
+    margin-left: 2rem;
+}
+
+.restaurant-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-item-info {
+    margin-left: 1rem;
+    flex-grow: 1;
+}
+
+.menu-item-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Cart page styles */
+.cart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    margin-left: 1rem;
+}
+
+.cart-item-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background-color: #eee;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quantity {
+    margin: 0 10px;
+}
+
+.cart-summary {
+    margin-top: 2rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.checkout-btn {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .restaurant-grid {
+        flex-direction: column;
+    }
+    
+    .restaurant-card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .steps {
+        flex-direction: column;
+    }
+    
+    .step {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
